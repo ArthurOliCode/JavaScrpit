@@ -1,0 +1,53 @@
+body {
+    background: rgb(107, 176, 255);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.596);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+input {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+}
+
+.button {
+    border-color: rgba(0, 0, 0, 0.705);
+    border-radius: 5%;
+    padding: 4px 8px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+}
+
+#output {
+    padding: 20px 5px;
+}
+
+#txtErro {
+    font: normal 12pt Arial;
+}
+
+#tableNum {
+    text-align: center;
+    font-size: 12pt;
+    padding: 20px 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+}

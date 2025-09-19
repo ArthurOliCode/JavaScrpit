@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Vetor number</title>
+</head>
+
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <div>
+            <label for="txtNum">Insira um número (1 a 100): </label><input type="number" name="txtNum"
+                id="txtNum"><br><br>
+            <button class="button" onclick="adicionar()">Adicionar</button><br><br>
+        </div>
+        <div>
+            <select name="tableNum" id="tableNum" multiple></select><br><br>
+            <button class="button" onclick="validar()">Validar</button>
+            <button class="button" onclick="limpar()">Limpar</button>
+            <p id="txtErro"></p>
+        </div>
+        <div id="output">
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

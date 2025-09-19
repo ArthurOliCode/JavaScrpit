@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Tabela</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tabela</h1>
+    </header>
+    <section>
+        <div id="form">
+            <p>
+                <label for="txtNum">Selecione um número: </label><input type="number" name="txtNum" id="txtNum">
+            </p>
+        </div>
+        <div id="select">
+            <button class="button" id="btnCalc" onclick="calc()">Calcular</button>
+            <p>
+                <label id="txtErro"></label>
+            </p>
+            <select name="table" id="table" required="required" multiple>
+            </select>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

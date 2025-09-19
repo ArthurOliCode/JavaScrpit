@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+
+        div#area{
+            font: normal 20pt Arial;
+            background-color: rgb(1, 187, 1);
+            color: aliceblue;
+            opacity: 0.8;
+            width: 200px;
+            height: 200px;
+            border-radius: 14%;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        div#dark{
+            font: normal 10pt Arial;
+            background-image:linear-gradient(to right, black, gray);
+            opacity: 0.5;
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%; 
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+        }
+
+        div#principal{
+            text-align: center;
+        }
+
+        body{
+            color: aliceblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="principal">
+
+        <div id="dark">
+            +/-
+        </div>
+        <div id="area">
+        Interaja..
+        </div>
+        
+
+    </div>
+    
+    <script>
+
+        var d = window.document.querySelector('div#dark');
+        d.addEventListener('click', clicarD);
+        d.addEventListener('mouseenter', hoverD);
+        d.addEventListener('mouseout', notHoverD);
+
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', hover)
+        a.addEventListener('mouseout', notHover)
+
+
+        var Cbody = window.document.body
+        Cbody.style.background = "rgb(226, 226, 226)"
+
+        function clicarD(){
+            if(Cbody.style.background == 'rgb(41, 41, 41)'){
+                window.document.body.style.backgroundColor = 'rgb(226, 226, 226)';
+            }else{
+                window.document.body.style.backgroundColor = 'rgb(41, 41, 41)';
+            }
+            
+        }
+
+        function hoverD(){
+            d.style.opacity = 1.0
+        }
+
+        function notHoverD(){
+            d.style.opacity = 0.5
+        }
+        
+
+        function clicar() {
+            if(a.textContent == 'clicou'){
+                a.innerText = 'interaja..'
+            }else{
+                a.innerText = 'clicou'
+            }
+            
+        }
+
+        function hover(){
+            a.style.backgroundColor = 'rgb(31, 120, 236)';
+            a.style.opacity = 1;
+        }
+
+        function notHover(){
+            a.style.backgroundColor = 'rgb(1, 187, 1)';
+            a.style.opacity = 0.8;
+        }
+
+    </script>
+</body>
+</html>

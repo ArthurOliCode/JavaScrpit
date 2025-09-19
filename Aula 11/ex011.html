@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema de Estrangeiros</h1>
+
+    <div id="entrada">
+        <p>Qual país você está neste momento: <input type="text" name="txtPais" id="txtPais">
+        <input type="button" value="verificar" onclick="verifyBras()"></p>
+
+    </div>
+
+    <div id="resp"></div>
+
+    <script>
+        //Estudo de condições simples e compostas
+
+        //Função para resgatar a string digitada, caso seja brasileiro e, caso não.
+        function verifyBras() {
+            var entrada = document.getElementById("txtPais").value;
+            var txtPais = String(entrada).toLowerCase();
+            var resp = window.document.querySelector("div#resp");
+            var bras = false;
+
+            if (txtPais === "brasil"){
+                bras = true
+                resp.innerHTML = `você é <strong>brasileiro</strong>, parabéns por ser do <strong>Brasil</strong>!!`
+            }else{
+                resp.innerHTML = `Você é do(a) <strong>${txtPais}</strong> ! Você é <strong>estrangeiro</strong> para nós!`
+            }
+        }
+    </script>
+</body>
+</html>
